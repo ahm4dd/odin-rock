@@ -6,8 +6,24 @@ const mapped_choices = {
     2: "scissors"
 };
 
+let humanScore = 0, computerScore = 0;
+
 function getComputerChoice(max = COMPUTER_OPTIONS) {
     const choice = Math.floor(Math.random() * max);
     
     return mapped_choices[choice];
 }
+
+function getHumanChoice() {
+    let choice = "";
+    
+    do {
+        let input = prompt("Enter your choice: ").toLowerCase();
+        if (Object.values(mapped_choices).includes(input)) {
+            choice = input;
+        }
+    } while (choice === "");
+
+    return choice;
+}
+

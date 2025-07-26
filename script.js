@@ -1,4 +1,5 @@
 const COMPUTER_OPTIONS = 3;
+const ROUNDS = 5;
 
 const mapped_choices = { 
     0: "rock", 
@@ -43,5 +44,21 @@ function playRound(humanChoice, computerChoice) {
         default: 
             computerScore++;
             return `You lose! ${computerChoice} beats ${humanChoice}`;
+    }
+}
+
+function playGame() {
+    for (let i = 0; i < ROUNDS; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        
+        playRound(humanChoice, computerChoice);
+    }
+    if (humanScore > computerScore) {
+        console.log("You won against the computer!");
+    }
+
+    else {
+        console.log("You lost against the computer");
     }
 }

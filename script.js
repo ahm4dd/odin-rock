@@ -27,3 +27,21 @@ function getHumanChoice() {
     return choice;
 }
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return "It's a tie!";
+    }
+    
+    const combination = humanChoice + "-" + computerChoice;
+
+    switch (combination) {
+        case "rock-scissors":
+        case "paper-rock":
+        case "scissors-paper":
+            humanScore++;
+            return `You win! ${humanChoice} beats ${computerChoice}`;
+        default: 
+            computerScore++;
+            return `You lose! ${computerChoice} beats ${humanChoice}`;
+    }
+}

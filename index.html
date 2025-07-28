@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>rock-paper-scissors</title>
 </head>
 <body>
+    <div class="container">
+        <div class="scoreboard">
+            <div class="scores">
+                <p class="bot-score">Bot: 0</p>
+                <p class="player-score">You: 0</p>
+            </div>
+            <div class="board">
+                <p class="board-text">
+                    Click start match to begin
+                </p>
+            </div>
+        </div>
+
+        <div class="choice-buttons">
+            <button class="choice-button">Rock</button>
+            <button class="choice-button">Paper</button>
+            <button class="choice-button">Scissors</button>
+        </div>
+            
+        <button class="status">Start match</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

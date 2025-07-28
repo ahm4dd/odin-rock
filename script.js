@@ -15,6 +15,9 @@ function getComputerChoice(max = COMPUTER_OPTIONS) {
     return mapped_choices[choice];
 }
 
+
+
+
 function getHumanChoice() {
     let choice = "";
     

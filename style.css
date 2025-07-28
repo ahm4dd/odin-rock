@@ -28,6 +28,7 @@ body {
 }
 
 .board {
+    border: 1px solid black;
     font-size: 16px;
     background-color: #d9d9d9;
     display: flex;
@@ -42,6 +43,8 @@ button,
 }
 
 button {
+    border: 0px solid black;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.58);
     color: #f5f5f5;
     font-size: 16px;
     padding: 12px;

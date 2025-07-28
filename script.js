@@ -10,13 +10,6 @@ const mapped_choices = {
 
 let humanScore = 0, computerScore = 0;
 
-function getComputerChoice(max = COMPUTER_OPTIONS) {
-    const choice = Math.floor(Math.random() * max);
-    
-    return mapped_choices[choice];
-}
-
-
 const container = document.querySelector(".container");
 const scoreboard = document.querySelector(".scoreboard");
 const boardText = document.querySelector(".board-text");
@@ -78,18 +71,10 @@ resetBtn.addEventListener("click", () => {
     boardText.textContent = "Select any option to start";
 });
 
-
-function getHumanChoice() {
-    let choice = "";
+function getComputerChoice(max = COMPUTER_OPTIONS) {
+    const choice = Math.floor(Math.random() * max);
     
-    do {
-        let input = prompt("Enter your choice: ").toLowerCase();
-        if (Object.values(mapped_choices).includes(input)) {
-            choice = input;
-        }
-    } while (choice === "");
-
-    return choice;
+    return mapped_choices[choice];
 }
 
 function playRound(humanChoice, computerChoice) {
